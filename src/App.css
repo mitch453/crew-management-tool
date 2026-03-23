@@ -1,0 +1,375 @@
+.app {
+  min-height: 100vh;
+  padding: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-primary {
+  background: #3b82f6;
+  color: white;
+}
+.btn-primary:hover {
+  background: #2563eb;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #334155;
+}
+.btn-ghost:hover {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+.btn-icon:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Main Layout */
+.main-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pool Section */
+.pool-section {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 16px;
+  position: sticky;
+  top: 20px;
+}
+
+.pool-section h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin: 0 0 12px 0;
+}
+
+.pool-section h2 .count {
+  color: #64748b;
+  font-weight: 400;
+}
+
+.pool-list {
+  min-height: 60px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pool-list.drag-over {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+/* On Leave Section */
+.on-leave-section {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #334155;
+}
+
+.on-leave-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #94a3b8;
+  margin: 0 0 8px 0;
+}
+
+.leave-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.leave-item.annual {
+  background: rgba(234, 179, 8, 0.08);
+  border: 1px solid rgba(234, 179, 8, 0.2);
+}
+.leave-item.sick {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.leave-item-name {
+  flex: 1;
+  color: #cbd5e1;
+}
+
+.leave-type-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* Installer Card */
+.installer-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: grab;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.installer-card:hover {
+  border-color: #475569;
+  background: #162032;
+}
+
+.installer-card.dragging {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-color: #3b82f6;
+  z-index: 100;
+}
+
+.installer-card.unavailable {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.installer-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.installer-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e2e8f0;
+  white-space: nowrap;
+}
+
+.installer-level {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.leave-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.leave-badge.annual {
+  background: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+.leave-badge.sick {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.installer-actions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.leave-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.15s;
+}
+
+.leave-btn.annual {
+  color: #64748b;
+}
+.leave-btn.annual:hover {
+  color: #eab308;
+  background: rgba(234, 179, 8, 0.1);
+}
+
+.leave-btn.sick {
+  color: #64748b;
+}
+.leave-btn.sick:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.leave-btn.available {
+  color: #64748b;
+}
+.leave-btn.available:hover {
+  color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+/* Crews Section */
+.crews-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty-crews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 60px 20px;
+  color: #64748b;
+  font-size: 15px;
+  background: #1e293b;
+  border-radius: 12px;
+  border: 2px dashed #334155;
+}
+
+/* Crew Card */
+.crew-card {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.crew-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #334155;
+}
+
+.crew-name-input {
+  background: none;
+  border: none;
+  color: #f1f5f9;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 4px 0;
+  outline: none;
+  flex: 1;
+  min-width: 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+.crew-name-input:focus {
+  border-bottom-color: #3b82f6;
+}
+
+.crew-stats {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.crew-stats .stat strong {
+  color: #e2e8f0;
+}
+
+.crew-members {
+  padding: 12px;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 0 0 12px 12px;
+  transition: background 0.2s;
+}
+
+.crew-members.drag-over {
+  background: rgba(59, 130, 246, 0.06);
+}
+
+/* Empty Messages */
+.empty-msg {
+  color: #475569;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px;
+}
+
+.drop-hint {
+  border: 2px dashed #334155;
+  border-radius: 8px;
+  margin: 4px;
+}
